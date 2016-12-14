@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RecDatabaseModelStoreContainer" CdmEntityContainer="RecDatabaseModelContainer">
+    <EntitySetMapping Name="UserInformations">
+      <EntityTypeMapping TypeName="IsTypeOf(RecDatabaseModel.UserInformation)">
+        <MappingFragment StoreEntitySet="UserInformations">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="userType" ColumnName="userType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="participants">
+      <EntityTypeMapping TypeName="IsTypeOf(RecDatabaseModel.participants)">
+        <MappingFragment StoreEntitySet="participants">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="diagnosis" ColumnName="diagnosis" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="program" ColumnName="program" />
+          <ScalarProperty Name="username" ColumnName="username" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="articles">
+      <EntityTypeMapping TypeName="IsTypeOf(RecDatabaseModel.articles)">
+        <MappingFragment StoreEntitySet="articles">
+          <ScalarProperty Name="articleId" ColumnName="articleId" />
+          <ScalarProperty Name="articleImage" ColumnName="articleImage" />
+          <ScalarProperty Name="articlePDF" ColumnName="articlePDF" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="diagnosis">
+      <EntityTypeMapping TypeName="IsTypeOf(RecDatabaseModel.diagnosis)">
+        <MappingFragment StoreEntitySet="diagnosis">
+          <ScalarProperty Name="diagnosisId" ColumnName="diagnosisId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="events">
+      <EntityTypeMapping TypeName="IsTypeOf(RecDatabaseModel.events)">
+        <MappingFragment StoreEntitySet="events">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="endTime" ColumnName="endTime" />
+          <ScalarProperty Name="endDescription" ColumnName="endDescription" />
+          <ScalarProperty Name="eventImage" ColumnName="eventImage" />
+          <ScalarProperty Name="eventName" ColumnName="eventName" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="startTime" ColumnName="startTime" />
+          <ScalarProperty Name="totalSeats" ColumnName="totalSeats" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="registrations">
+      <EntityTypeMapping TypeName="IsTypeOf(RecDatabaseModel.registration)">
+        <MappingFragment StoreEntitySet="registrations">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="allergies" ColumnName="allergies" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="emergencyPhone" ColumnName="emergencyPhone" />
+          <ScalarProperty Name="expectationsAndGoals" ColumnName="expectationsAndGoals" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="paymentType" ColumnName="paymentType" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="programOfInterest" ColumnName="programOfInterest" />
+          <ScalarProperty Name="recreationalInterest" ColumnName="recreationalInterest" />
+          <ScalarProperty Name="specialNeeds" ColumnName="specialNeeds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="regions">
+      <EntityTypeMapping TypeName="IsTypeOf(RecDatabaseModel.regions)">
+        <MappingFragment StoreEntitySet="regions">
+          <ScalarProperty Name="regionId" ColumnName="regionId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

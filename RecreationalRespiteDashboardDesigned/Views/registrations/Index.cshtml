@@ -1,0 +1,99 @@
+﻿@model IEnumerable<RecreationalRespiteDashboardDesigned.Models.registration>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.allergies)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emergencyPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.expectationsAndGoals)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.paymentType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.programOfInterest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.recreationalInterest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.specialNeeds)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.allergies)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emergencyPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.expectationsAndGoals)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.paymentType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.programOfInterest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.recreationalInterest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.specialNeeds)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.username }) |
+            @Html.ActionLink("Details", "Details", new { id=item.username }) 
+           @* @Html.ActionLink("Delete", "Delete", new { id=item.username })*@
+        </td>
+    </tr>
+}
+
+</table>

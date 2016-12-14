@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="RecDatabaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="RecDatabaseModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UserInformations" EntityType="RecDatabaseModel.UserInformation" />
+    <EntitySet Name="participants" EntityType="RecDatabaseModel.participants" />
+    <EntitySet Name="articles" EntityType="RecDatabaseModel.articles" />
+    <EntitySet Name="diagnosis" EntityType="RecDatabaseModel.diagnosis" />
+    <EntitySet Name="events" EntityType="RecDatabaseModel.events" />
+    <EntitySet Name="registrations" EntityType="RecDatabaseModel.registration" />
+    <EntitySet Name="regions" EntityType="RecDatabaseModel.regions" />
+  </EntityContainer>
+  <EntityType Name="UserInformation">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="city" Type="String" Nullable="false" />
+    <Property Name="email" Type="String" Nullable="false" />
+    <Property Name="firstname" Type="String" Nullable="false" />
+    <Property Name="lastname" Type="String" Nullable="false" />
+    <Property Name="phoneNumber" Type="String" Nullable="false" />
+    <Property Name="region" Type="String" Nullable="false" />
+    <Property Name="userType" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="participants">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="diagnosis" Type="String" Nullable="false" />
+    <Property Name="firstname" Type="String" Nullable="false" />
+    <Property Name="gender" Type="String" Nullable="false" />
+    <Property Name="lastname" Type="String" Nullable="false" />
+    <Property Name="notes" Type="String" Nullable="false" />
+    <Property Name="program" Type="String" Nullable="false" />
+    <Property Name="username" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="articles">
+    <Key>
+      <PropertyRef Name="articleId" />
+    </Key>
+    <Property Name="articleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="articleImage" Type="String" Nullable="false" />
+    <Property Name="articlePDF" Type="String" Nullable="false" />
+    <Property Name="description" Type="String" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="diagnosis">
+    <Key>
+      <PropertyRef Name="diagnosisId" />
+    </Key>
+    <Property Name="diagnosisId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="events">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cost" Type="String" Nullable="false" />
+    <Property Name="date" Type="String" Nullable="false" />
+    <Property Name="endTime" Type="String" Nullable="false" />
+    <Property Name="endDescription" Type="String" Nullable="false" />
+    <Property Name="eventImage" Type="String" Nullable="false" />
+    <Property Name="eventName" Type="String" Nullable="false" />
+    <Property Name="location" Type="String" Nullable="false" />
+    <Property Name="region" Type="String" Nullable="false" />
+    <Property Name="startTime" Type="String" Nullable="false" />
+    <Property Name="totalSeats" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="registration">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="age" Type="String" Nullable="false" />
+    <Property Name="allergies" Type="String" Nullable="false" />
+    <Property Name="email" Type="String" Nullable="false" />
+    <Property Name="emergencyPhone" Type="String" Nullable="false" />
+    <Property Name="expectationsAndGoals" Type="String" Nullable="false" />
+    <Property Name="location" Type="String" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" />
+    <Property Name="paymentType" Type="String" Nullable="false" />
+    <Property Name="phone" Type="String" Nullable="false" />
+    <Property Name="programOfInterest" Type="String" Nullable="false" />
+    <Property Name="recreationalInterest" Type="String" Nullable="false" />
+    <Property Name="specialNeeds" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="regions">
+    <Key>
+      <PropertyRef Name="regionId" />
+    </Key>
+    <Property Name="regionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" />
+  </EntityType>
+</Schema>

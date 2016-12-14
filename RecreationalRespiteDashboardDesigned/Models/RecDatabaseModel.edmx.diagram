@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ca188f3167174b93927eafd6e308c129" Name="Diagram1" >
+        <EntityTypeShape EntityType="RecDatabaseModel.UserInformation" Width="1.5" PointX="9" PointY="2.125" />
+        <EntityTypeShape EntityType="RecDatabaseModel.participants" Width="1.5" PointX="10.75" PointY="0.5" />
+        <EntityTypeShape EntityType="RecDatabaseModel.articles" Width="1.5" PointX="5.625" PointY="0.5" />
+        <EntityTypeShape EntityType="RecDatabaseModel.diagnosis" Width="1.5" PointX="9.125" PointY="0.5" />
+        <EntityTypeShape EntityType="RecDatabaseModel.events" Width="1.5" PointX="7.5" PointY="0.5" />
+        <EntityTypeShape EntityType="RecDatabaseModel.registration" Width="1.5" PointX="1" PointY="0.625" />
+        <EntityTypeShape EntityType="RecDatabaseModel.regions" Width="1.5" PointX="3.5" PointY="2" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

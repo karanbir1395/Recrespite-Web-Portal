@@ -1,0 +1,114 @@
+﻿@model RecreationalRespiteDashboardDesigned.Models.registration
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>registration</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.allergies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.allergies)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emergencyPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emergencyPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.expectationsAndGoals)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.expectationsAndGoals)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.paymentType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.paymentType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.programOfInterest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.programOfInterest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.recreationalInterest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.recreationalInterest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.specialNeeds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.specialNeeds)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.username }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

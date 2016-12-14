@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RecDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="RecDatabaseModelStoreContainer">
+    <EntitySet Name="UserInformations" EntityType="RecDatabaseModel.Store.UserInformations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="participants" EntityType="RecDatabaseModel.Store.participants" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="articles" EntityType="RecDatabaseModel.Store.articles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="diagnosis" EntityType="RecDatabaseModel.Store.diagnosis" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="events" EntityType="RecDatabaseModel.Store.events" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="registrations" EntityType="RecDatabaseModel.Store.registrations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="regions" EntityType="RecDatabaseModel.Store.regions" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="UserInformations">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="city" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="firstname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lastname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="phoneNumber" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="region" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userType" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="participants">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="diagnosis" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="firstname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="gender" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lastname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="notes" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="program" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="username" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="articles">
+    <Key>
+      <PropertyRef Name="articleId" />
+    </Key>
+    <Property Name="articleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="articleImage" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="articlePDF" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="diagnosis">
+    <Key>
+      <PropertyRef Name="diagnosisId" />
+    </Key>
+    <Property Name="diagnosisId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="events">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cost" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="date" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="endTime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="endDescription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="eventImage" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="eventName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="location" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="region" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="startTime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="totalSeats" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="registrations">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="age" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="allergies" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="emergencyPhone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="expectationsAndGoals" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="location" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="paymentType" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="phone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="programOfInterest" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="recreationalInterest" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="specialNeeds" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="regions">
+    <Key>
+      <PropertyRef Name="regionId" />
+    </Key>
+    <Property Name="regionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+</Schema>

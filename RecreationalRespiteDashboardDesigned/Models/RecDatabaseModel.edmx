@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RecDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="RecDatabaseModelStoreContainer">
+    <EntitySet Name="UserInformations" EntityType="RecDatabaseModel.Store.UserInformations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="participants" EntityType="RecDatabaseModel.Store.participants" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="articles" EntityType="RecDatabaseModel.Store.articles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="diagnosis" EntityType="RecDatabaseModel.Store.diagnosis" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="events" EntityType="RecDatabaseModel.Store.events" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="registrations" EntityType="RecDatabaseModel.Store.registrations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="regions" EntityType="RecDatabaseModel.Store.regions" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="UserInformations">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="city" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="firstname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lastname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="phoneNumber" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="region" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userType" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="participants">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="diagnosis" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="firstname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="gender" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lastname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="notes" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="program" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="username" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="articles">
+    <Key>
+      <PropertyRef Name="articleId" />
+    </Key>
+    <Property Name="articleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="articleImage" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="articlePDF" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="diagnosis">
+    <Key>
+      <PropertyRef Name="diagnosisId" />
+    </Key>
+    <Property Name="diagnosisId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="events">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cost" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="date" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="endTime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="endDescription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="eventImage" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="eventName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="location" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="region" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="startTime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="totalSeats" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="registrations">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="age" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="allergies" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="emergencyPhone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="expectationsAndGoals" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="location" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="paymentType" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="phone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="programOfInterest" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="recreationalInterest" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="specialNeeds" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="regions">
+    <Key>
+      <PropertyRef Name="regionId" />
+    </Key>
+    <Property Name="regionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="RecDatabaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="RecDatabaseModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="UserInformations" EntityType="RecDatabaseModel.UserInformation" />
+          <EntitySet Name="participants" EntityType="RecDatabaseModel.participants" />
+          <EntitySet Name="articles" EntityType="RecDatabaseModel.articles" />
+          <EntitySet Name="diagnosis" EntityType="RecDatabaseModel.diagnosis" />
+          <EntitySet Name="events" EntityType="RecDatabaseModel.events" />
+          <EntitySet Name="registrations" EntityType="RecDatabaseModel.registration" />
+          <EntitySet Name="regions" EntityType="RecDatabaseModel.regions" />
+        </EntityContainer>
+        <EntityType Name="UserInformation">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="city" Type="String" Nullable="false" />
+          <Property Name="email" Type="String" Nullable="false" />
+          <Property Name="firstname" Type="String" Nullable="false" />
+          <Property Name="lastname" Type="String" Nullable="false" />
+          <Property Name="phoneNumber" Type="String" Nullable="false" />
+          <Property Name="region" Type="String" Nullable="false" />
+          <Property Name="userType" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="participants">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="diagnosis" Type="String" Nullable="false" />
+          <Property Name="firstname" Type="String" Nullable="false" />
+          <Property Name="gender" Type="String" Nullable="false" />
+          <Property Name="lastname" Type="String" Nullable="false" />
+          <Property Name="notes" Type="String" Nullable="false" />
+          <Property Name="program" Type="String" Nullable="false" />
+          <Property Name="username" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="articles">
+          <Key>
+            <PropertyRef Name="articleId" />
+          </Key>
+          <Property Name="articleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="articleImage" Type="String" Nullable="false" />
+          <Property Name="articlePDF" Type="String" Nullable="false" />
+          <Property Name="description" Type="String" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="diagnosis">
+          <Key>
+            <PropertyRef Name="diagnosisId" />
+          </Key>
+          <Property Name="diagnosisId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="events">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cost" Type="String" Nullable="false" />
+          <Property Name="date" Type="String" Nullable="false" />
+          <Property Name="endTime" Type="String" Nullable="false" />
+          <Property Name="endDescription" Type="String" Nullable="false" />
+          <Property Name="eventImage" Type="String" Nullable="false" />
+          <Property Name="eventName" Type="String" Nullable="false" />
+          <Property Name="location" Type="String" Nullable="false" />
+          <Property Name="region" Type="String" Nullable="false" />
+          <Property Name="startTime" Type="String" Nullable="false" />
+          <Property Name="totalSeats" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="registration">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="age" Type="String" Nullable="false" />
+          <Property Name="allergies" Type="String" Nullable="false" />
+          <Property Name="email" Type="String" Nullable="false" />
+          <Property Name="emergencyPhone" Type="String" Nullable="false" />
+          <Property Name="expectationsAndGoals" Type="String" Nullable="false" />
+          <Property Name="location" Type="String" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <Property Name="paymentType" Type="String" Nullable="false" />
+          <Property Name="phone" Type="String" Nullable="false" />
+          <Property Name="programOfInterest" Type="String" Nullable="false" />
+          <Property Name="recreationalInterest" Type="String" Nullable="false" />
+          <Property Name="specialNeeds" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="regions">
+          <Key>
+            <PropertyRef Name="regionId" />
+          </Key>
+          <Property Name="regionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RecDatabaseModelStoreContainer" CdmEntityContainer="RecDatabaseModelContainer">
+    <EntitySetMapping Name="UserInformations">
+      <EntityTypeMapping TypeName="IsTypeOf(RecDatabaseModel.UserInformation)">
+        <MappingFragment StoreEntitySet="UserInformations">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="userType" ColumnName="userType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="participants">
+      <EntityTypeMapping TypeName="IsTypeOf(RecDatabaseModel.participants)">
+        <MappingFragment StoreEntitySet="participants">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="diagnosis" ColumnName="diagnosis" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="program" ColumnName="program" />
+          <ScalarProperty Name="username" ColumnName="username" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="articles">
+      <EntityTypeMapping TypeName="IsTypeOf(RecDatabaseModel.articles)">
+        <MappingFragment StoreEntitySet="articles">
+          <ScalarProperty Name="articleId" ColumnName="articleId" />
+          <ScalarProperty Name="articleImage" ColumnName="articleImage" />
+          <ScalarProperty Name="articlePDF" ColumnName="articlePDF" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="diagnosis">
+      <EntityTypeMapping TypeName="IsTypeOf(RecDatabaseModel.diagnosis)">
+        <MappingFragment StoreEntitySet="diagnosis">
+          <ScalarProperty Name="diagnosisId" ColumnName="diagnosisId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="events">
+      <EntityTypeMapping TypeName="IsTypeOf(RecDatabaseModel.events)">
+        <MappingFragment StoreEntitySet="events">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="endTime" ColumnName="endTime" />
+          <ScalarProperty Name="endDescription" ColumnName="endDescription" />
+          <ScalarProperty Name="eventImage" ColumnName="eventImage" />
+          <ScalarProperty Name="eventName" ColumnName="eventName" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="startTime" ColumnName="startTime" />
+          <ScalarProperty Name="totalSeats" ColumnName="totalSeats" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="registrations">
+      <EntityTypeMapping TypeName="IsTypeOf(RecDatabaseModel.registration)">
+        <MappingFragment StoreEntitySet="registrations">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="allergies" ColumnName="allergies" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="emergencyPhone" ColumnName="emergencyPhone" />
+          <ScalarProperty Name="expectationsAndGoals" ColumnName="expectationsAndGoals" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="paymentType" ColumnName="paymentType" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="programOfInterest" ColumnName="programOfInterest" />
+          <ScalarProperty Name="recreationalInterest" ColumnName="recreationalInterest" />
+          <ScalarProperty Name="specialNeeds" ColumnName="specialNeeds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="regions">
+      <EntityTypeMapping TypeName="IsTypeOf(RecDatabaseModel.regions)">
+        <MappingFragment StoreEntitySet="regions">
+          <ScalarProperty Name="regionId" ColumnName="regionId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
